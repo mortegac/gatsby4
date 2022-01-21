@@ -21,8 +21,17 @@ const HomepageTemplate = ({ data }) => {
     alternateLanguages,
   }
 
+  let PreviewScript = `
+  <script async defer src="https://static.cdn.prismic.io/prismic.js?new=true&repo=gatsby4"></script>
+`;
+
   return (
     <Layout topMenu={topMenu.data} activeDocMeta={activeDoc}>
+      
+      {typeof window !== "undefined" ? (
+          <script async defer src="https://static.cdn.prismic.io/prismic.js?new=true&repo=gatsby4"></script>
+      ) : null}
+      
       <SliceZone slices={homepage.data.body} components={components} />
     </Layout>
   )
