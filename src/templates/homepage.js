@@ -27,6 +27,7 @@ const HomepageTemplate = ({ data }) => {
 
   return (
     <Layout topMenu={topMenu.data} activeDocMeta={activeDoc}>
+    <span>TEST</span>
       
       {typeof window !== "undefined" ? (
           <script async defer src="https://static.cdn.prismic.io/prismic.js?new=true&repo=gatsby4"></script>
